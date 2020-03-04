@@ -3,6 +3,9 @@ def app(environ, start_response):
     headers = [('Content-Type', 'text/plain')]
     body = environ['QUERY_STRING'].split('&')
     body = [item + "\r\n" for item in body]
+
+    body = [bytes(item, encoding='utf-8') for item in body]
+
     start_response(status, headers)
-    return body.encode()
+    return body
 
