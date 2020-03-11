@@ -10,4 +10,4 @@ sudo rm /etc/nginx/sites-enabled/default
 sudo /etc/init.d/nginx restart
 
 sudo cat /var/log/nginx/error.log
-gunicorn -b 0.0.0.0:8080 -c ~/web/hello.py hello:app
+#gunicorn -b 0.0.0.0:8080 -c ~/web/hello.py hello:app
